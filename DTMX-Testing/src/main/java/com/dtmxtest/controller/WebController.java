@@ -22,7 +22,7 @@ public class WebController {
 	EmployeeRepository repository;
 	
 	@RequestMapping("/employees/seed")
-	public String process(){
+	public String seedDB(){
 		repository.saveAll(Arrays.asList(new Employee("Alex", "Behrman", "alex@email.com"), new Employee("Emily", "Davitt", "emily@email.com"),
 										new Employee("Cal", "Notman", "cal@email.com"), new Employee("Shashank", "Singh", "shashank@email.com")));
 		return "Done";
